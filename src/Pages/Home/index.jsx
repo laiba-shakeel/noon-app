@@ -1,10 +1,13 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
+import Breadcrum from '../../components/Breadcrum'
 
 const Home_Screen = () => {
 
   return (
     <div>
-      home screen
+      <Navbar />
+      <Breadcrum />
     </div>
   )
 }

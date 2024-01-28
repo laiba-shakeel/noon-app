@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Stack, Paper, Typography, Button } from '@mui/material'
-import Input_Component from '../../../components/InputField'
+import Input_Component from '../../../components/InputField/Input_Component'
 import { credentials_data } from '../../../Utils/CredentialsData'
 import { useNavigate } from 'react-router-dom'
 

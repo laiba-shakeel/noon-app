@@ -4,7 +4,13 @@ import LineSeparator from "../Separator";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { useNavigate } from "react-router-dom";
 const NavItem = () => {
+  const navigate = useNavigate();
+  const handleProfileClick = () => {
+    // console.log('ndbsb')
+    navigate('/profile')
+  }
   return (
     <Box
       sx={{
@@ -35,29 +41,31 @@ const NavItem = () => {
         العربية
         <LineSeparator />
       </Typography>
-      <Typography
-        variant="p"
-        flexWrap="wrap"
-        component="a"
-        href="#app-bar-with-responsive-menu"
-        sx={{
-          ml: 0.8,
-          display: { xs: "none", sm: "flex", md: "flex" },
-          fontFamily: "monospace",
-          fontWeight: "bold",
-          color: "black",
-          textDecoration: "none",
-          fontSize: 16,
-          maxWidth: 130,
-        }}
-      >
-        Log In
-        <PersonOutlineIcon
-          fontSize="small"
-          sx={{ color: "#3c414f", ml: 0.5 }}
-        />
-        <LineSeparator />
-      </Typography>
+      <span onClick={handleProfileClick}>
+        <Typography
+          variant="p"
+          flexWrap="wrap"
+          component="a"
+          href="#app-bar-with-responsive-menu"
+          sx={{
+            ml: 0.8,
+            display: { xs: "none", sm: "flex", md: "flex" },
+            fontFamily: "monospace",
+            fontWeight: "bold",
+            color: "black",
+            textDecoration: "none",
+            fontSize: 16,
+            maxWidth: 130,
+          }}
+        >
+          Profile
+          <PersonOutlineIcon
+            fontSize="small"
+            sx={{ color: "#3c414f", ml: 0.5 }}
+          />
+          <LineSeparator />
+        </Typography>
+      </span>
       <Typography
         variant="p"
         flexWrap="wrap"
