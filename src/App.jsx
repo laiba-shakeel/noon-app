@@ -1,12 +1,11 @@
 // import './App.css'
 
-import Breadcrum from "./components/Breadcrum";
-import Navbar from "./components/Navbar";
+import { Router_App } from "./Routes/Router_App";
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Breadcrum />
+       <Router_App />
     </>
   );
 }
