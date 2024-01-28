@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <Stack className='min-h-[100dvh] justify-center items-center'>
             <div className='max-w-md'>
-                <Typography align="center" fontWeight="bold" variant="h5">
+                <Typography align="center" fontWeight="bold" variant="h5" color='red'>
                     Login
                 </Typography>
                 <Paper
