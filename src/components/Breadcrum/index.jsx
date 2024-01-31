@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import LineSeparator from "../Separator";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import CatagoriesList from "./catagoriesList";
 const Breadcrum = () => {
   const [show, setShow] = useState(false)
 
@@ -25,11 +26,12 @@ const Breadcrum = () => {
           flexDirection: "row",
           //   justifyContent: "space-around",
           alignItems: "center",
+          padding: 1
         }}
       >
         <span
           onMouseOver={() => setShow(true)}
-          onMouseLeave={() => setShow(false)}
+          // onMouseLeave={() => setShow(false)}
         >
           <Typography
             variant="p"
@@ -54,196 +56,9 @@ const Breadcrum = () => {
         <LineSeparator />
       </Box>
       {show && <span style={{ marginTop: 3, padding: 5, backgroundColor: '#fcfbf4', width: 250 }}>
-        <Stack style={{
-          border: 1,
-          borderColor: 'red',
-          diplay: 'flex',
-          flexDirection: 'column',
-          gap:5
-        }}>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-          <span>
-            <Typography
-              variant="p"
-              flexWrap="wrap"
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                ml: 0.8,
-                display: { xs: "none", sm: "flex", md: "flex" },
-                fontFamily: "Cairo",
-                fontWeight: 300,
-                color: "#3866df",
-                textDecoration: "none",
-                letterSpacing: 1,
-                fontSize: 20,
-                textAlign: 'center'
-              }}
-            >
-              Iteams
-            </Typography>
-          </span>
-        </Stack>
+        <CatagoriesList />
       </span>
       }
-
-      {/* {show && <span style={{border: 1, borderColor:'red'}}><Typography>i will be shown here</Typography></span>} */}
-      {/* <Stack
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-
-      </Stack> */}
     </Stack>
   );
 };
