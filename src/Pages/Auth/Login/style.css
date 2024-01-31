@@ -1,0 +1,8 @@
+/* style.css */
+
+.main {
+    width: 25rem; /* Add a unit, such as 'rem' or 'px' */
+    border: 1px solid black; /* Add a unit and 'solid' for border style */
+    height: 25rem; /* Add a unit */
+  }
+  
