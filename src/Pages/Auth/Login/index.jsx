@@ -3,13 +3,14 @@ import { Stack, Paper, Typography, Button } from '@mui/material'
 import Input_Component from '../../../components/InputField/Input_Component'
 import { credentials_data } from '../../../Utils/CredentialsData'
 import { useNavigate } from 'react-router-dom'
-
+// import gifImg from '../../../assets/gif.gif'
+import IMAGES from '../../../assets/Images/index'
 const Login = () => {
     const [userData, setUserData] = useState({})
     const navigate = useNavigate()
     // console.log(credentials_data)
 
-    // useState is hook use for every time their is need to change the state 
+    // useState is hook use for every time when their is need to change the state 
 
     const onChnageHandle = (e) => {
         // console.log(userData, "userDta")
@@ -34,17 +35,24 @@ const Login = () => {
         // credentials_data
     };
     return (
-        <Stack className='min-h-[100dvh] justify-center items-center'>
-            <div className='max-w-md'>
-                <Typography align="center" fontWeight="bold" variant="h5" color='red'>
-                    Login
-                </Typography>
+        <Stack style={{
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'row',
+            height: '100vh'
+        }}>
+            <div style={{ border: 1, borderColor: 'black' }}>
+
                 <Paper
                     component="form"
                     onSubmit={submitHandle}
                     sx={{ px: 2, py: 3 }}
                     elevation={10}
                 >
+                    <Typography align="center" fontWeight="bold" variant="h4" color='Highlight' sx={{ mb: 3 }}>
+                        Login
+                    </Typography>
                     <Input_Component
                         placeholder="Enter User Name"
                         type="text"
@@ -69,6 +77,10 @@ const Login = () => {
                     </Button>
                 </Paper>
             </div>
+            <Stack sx={{ width: 600, height: 400 }}>
+                <img src={IMAGES.image2} alt='first image' width='100%' height='100%' />
+            </Stack>
+
         </Stack>
 
     )
